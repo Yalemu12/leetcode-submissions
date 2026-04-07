@@ -1,0 +1,31 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+
+        if len(s) != len(t):
+            return False
+
+        countS, countT = {}, {}
+
+        for i in range(len(s)):
+            countS[s[i]] = 1 + countS.get(s[i], 0)
+            countT[t[i]] = 1 + countT.get(t[i], 0)
+        return countS == countT  
+
+
+        """
+        "one string contains the exact same characters as another string but the order of the characters can be 
+        different" 
+
+        Thinking process: frequencies -> hash maps 
+
+        maybe we can make two different hash tables to check the frequency in each character in string s
+        and string t 
+
+
+
+        """
+
+       
+
+        
+        
